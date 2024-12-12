@@ -110,6 +110,7 @@ window_behavior:
       shown_on_top: false
 
 workspaces:
+  # 0 is the leftmost monitor and every increment is the next one to the right.
   - name: "1"
     bind_to_monitor: 0
   - name: "2"
@@ -134,6 +135,9 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
+
+      # Ingores the Task Manager window.
+      - window_class: { equals: 'TaskManagerWindow' }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
@@ -205,8 +209,8 @@ keybindings:
   - commands: ['wm-toggle-pause']
     bindings: ['alt+shift+p']
 
-  # Change tiling direction. This determines where new tiling windows will
-  # be inserted.
+    # Change tiling direction. This determines where new tiling windows will
+    # be inserted.
   - commands: ['toggle-tiling-direction']
     bindings: ['alt+v']
 
@@ -246,9 +250,7 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
 
-  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
-  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
-  # Terminal and Git Bash respectively.
+  # Launch terminal.
   - commands: ['shell-exec wt']
     bindings: ['alt+enter']
 
