@@ -1,0 +1,12 @@
+[2m2024-12-11T20:59:46.187172Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.corner_style.style: unknown variant `rounden`, expected one of `default`, `square`, `rounded`, `small_rounded` at line 75 column 14
+[2m2024-12-11T20:59:50.506419Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.corner_style.style: unknown variant `rounden`, expected one of `default`, `square`, `rounded`, `small_rounded` at line 75 column 14
+[2m2024-12-11T21:09:10.434285Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 252 column 15
+[2m2024-12-11T21:09:19.870673Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 252 column 15
+[2m2024-12-11T21:09:43.098108Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'Start-Process wt'.\n\nError: Der Vorgang wurde durch den Benutzer abgebrochen. (0x800704C7)"
+[2m2024-12-11T21:10:09.496061Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 252 column 15
+[2m2024-12-11T21:10:11.406784Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 252 column 15
+[2m2024-12-11T21:10:13.557851Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute 'Start-Process wt'.\n\nError: Der Vorgang wurde durch den Benutzer abgebrochen. (0x800704C7)"
