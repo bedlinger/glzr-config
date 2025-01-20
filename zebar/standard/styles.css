@@ -9,7 +9,8 @@
  }
  
  body {
-   color: rgb(255 255 255 / 90%);
+   color: #ebdbb2; /* Gruvbox foreground color */
+   background: #282828; /* Gruvbox background color */
    overflow: hidden;
    font-size: 13px;
  }
@@ -27,8 +28,8 @@
  }
  
  #root {
-   border-bottom: 1px solid rgb(255 255 255 / 5%);
-   background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+   border-bottom: 1px solid #3c3836; /* Gruvbox dark gray */
+   background: #282828; /* Gruvbox background color */
  }
  
  .app {
@@ -38,7 +39,7 @@
    height: 100%;
    font-family: CaskaydiaCove Nerd Font SemiBold, monospace;
    padding: 5px 8px;
-   background: #2b2b2b;
+   background: #282828; /* Gruvbox background color */
    border-radius: 0px;
  }
  
@@ -90,21 +91,21 @@
  }
  
  .workspace {
-   background: #444444;
-   color: white;
+   background: #3c3836; /* Gruvbox dark gray */
+   color: #ebdbb2; /* Gruvbox foreground color */
    border: none;
    border-radius: 0px;
    cursor: pointer;
    margin-right: 8px;
  
    &.displayed {
-     background: #555555;
+     background: #504945; /* Gruvbox medium gray */
    }
  
    &.focused,
    &:hover {
-     background: #666666;
-     color: white;
+     background: #665c54; /* Gruvbox light gray */
+     color: #ebdbb2; /* Gruvbox foreground color */
      border: none;
    }
  }
@@ -116,7 +117,7 @@
  .binding-mode,
  .tiling-direction {
    background: transparent;
-   color: rgb(255 255 255 / 90%);
+   color: #ebdbb2; /* Gruvbox foreground color */
    border-radius: 0px;
    line-height: 1;
    padding: 4px 5px;
@@ -141,20 +142,20 @@
  }
  
  .cpu {
-   color: #1e90ff;
+   color: #458588; /* Gruvbox blue */
  }
  
  .cpu .high-usage {
-   color: #900029;
+   color: #cc241d; /* Gruvbox red */
    animation: flash 0.50s infinite; /* Faster flashing for high usage */
  }
  
  .memory {
-   color: violet;
+   color: #b16286; /* Gruvbox purple */
  }
  
  .memory .high-usage {
-   color: #900029;
+   color: #cc241d; /* Gruvbox red */
    animation: flash 0.50s infinite; /* Faster updates for memory */
  }
  
@@ -167,14 +168,13 @@
    font-size: 8px;
    left: 1px;
    top: 3px;
-   color: rgb(255, 60, 0);
+   color: #d79921; /* Gruvbox yellow */
  }
  
  .uptime {
-   color: white;
+   color: #ebdbb2; /* Gruvbox foreground color */
  }
  
  .weather {
-   color: white;
+   color: #ebdbb2; /* Gruvbox foreground color */
  }
- 
