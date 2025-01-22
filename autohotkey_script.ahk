@@ -10,6 +10,7 @@ userprofile := EnvGet("userprofile")
 
 browser := "zen.exe"
 music := userprofile "\AppData\Roaming\Spotify\Spotify.exe"
+editor := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 
 ; (Alt+B) Open Browser
 !b:: {
@@ -18,10 +19,10 @@ music := userprofile "\AppData\Roaming\Spotify\Spotify.exe"
 
 ; (Alt+C) Open Visual Studio Code
 !c:: {
-    Run "C:\Program Files\Microsoft VS Code\Code.exe"
+    Run editor
 }
 
-; (Alt+M) Open Music App
-!m:: {
+; (Alt+Z) Open Music App
+!z:: {
     Run music
 }
