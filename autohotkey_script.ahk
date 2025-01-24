@@ -11,6 +11,7 @@ userprofile := EnvGet("userprofile")
 browser := "zen.exe"
 music := userprofile "\AppData\Roaming\Spotify\Spotify.exe"
 editor := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+terminal := "wt.exe"
 
 ; (Alt+B) Open Browser
 !b:: {
@@ -25,4 +26,17 @@ editor := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 ; (Alt+Z) Open Music App
 !z:: {
     Run music
+}
+
+; (Alt+Enter) Open Terminal
+!Enter:: {
+    Run terminal
+}
+
+; (Alt+Shift+?) Open the image
+!+?:: {
+    try
+        Run 'open "C:\Users\benie\Pictures\sei_das_problem.png"'
+    catch
+        MsgBox "File does not exist."
 }

@@ -122,11 +122,11 @@ workspaces:
   - name: "5"
     bind_to_monitor: 1
   - name: "6"
-    bind_to_monitor: 2
+    bind_to_monitor: 1
   - name: "7"
-    bind_to_monitor: 2
+    bind_to_monitor: 1
   - name: "8"
-    bind_to_monitor: 2
+    bind_to_monitor: 1
   - name: "9"
     bind_to_monitor: 0
 
@@ -135,9 +135,6 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
-
-      # Ingores the Task Manager window.
-      - window_class: { equals: 'TaskManagerWindow' }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
@@ -150,6 +147,14 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
+
+  - commands: ["set-floating"]
+    match:
+      # Set the window to floating if the title equals 'sei_das_problem.png'.
+      - window_title: { equals: 'sei_das_problem.png' }
+
+      # Set the window to floating if the class equals 'TaskManagerWindow'.
+      - window_class: { equals: 'TaskManagerWindow' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -198,33 +203,14 @@ keybindings:
   - commands: ['resize --height -2%']
     bindings: ['alt+i']
 
-  # As an alternative to the resize keybindings above, resize mode enables
-  # resizing via arrow keys or HJKL. The binding mode is defined above with
-  # the name 'resize'.
-  - commands: ['wm-enable-binding-mode --name resize']
-    bindings: ['alt+r']
-
-  # Disables window management and all other keybindings until alt+shift+p
-  # is pressed again.
-  - commands: ['wm-toggle-pause']
-    bindings: ['alt+shift+p']
-
     # Change tiling direction. This determines where new tiling windows will
     # be inserted.
   - commands: ['toggle-tiling-direction']
     bindings: ['alt+v']
 
-  # Change focus from tiling windows -> floating -> fullscreen.
-  - commands: ['wm-cycle-focus']
-    bindings: ['alt+space']
-
   # Change the focused window to be floating.
   - commands: ['toggle-floating --centered']
     bindings: ['alt+shift+space']
-
-  # Change the focused window to be tiling.
-  - commands: ['toggle-tiling']
-    bindings: ['alt+t']
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
@@ -250,16 +236,6 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
 
-  # Launch terminal.
-  - commands: ['shell-exec wt']
-    bindings: ['alt+enter']
-
-  # Focus the next/previous active workspace defined in `workspaces` config.
-  - commands: ['focus --next-active-workspace']
-    bindings: ['alt+t']
-  - commands: ['focus --prev-active-workspace']
-    bindings: ['alt+shift+t']
-
   # Focus the workspace that last had focus.
   - commands: ['focus --recent-workspace']
     bindings: ['alt+d']
@@ -283,17 +259,6 @@ keybindings:
     bindings: ['alt+8']
   - commands: ['focus --workspace 9']
     bindings: ['alt+9']
-
-  # Move the focused window's parent workspace to a monitor in a given
-  # direction.
-  - commands: ['move-workspace --direction left']
-    bindings: ['alt+shift+a']
-  - commands: ['move-workspace --direction right']
-    bindings: ['alt+shift+f']
-  - commands: ['move-workspace --direction up']
-    bindings: ['alt+shift+d']
-  - commands: ['move-workspace --direction down']
-    bindings: ['alt+shift+s']
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ['move --workspace 1', 'focus --workspace 1']
