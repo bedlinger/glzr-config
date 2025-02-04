@@ -33,6 +33,11 @@ terminal := "wt.exe"
     Run terminal
 }
 
+; (Alt+Shift+Enter) Open Terminal as Administrator
+!+Enter:: {
+    Run terminal ' new-tab --profile "konsole admin"'
+}
+
 ; (Alt+Shift+?) Open the image
 !+?:: {
     try
