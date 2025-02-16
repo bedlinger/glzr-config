@@ -162,6 +162,10 @@ window_rules:
             equals: "Extension: (Bitwarden Password Manager) - Bitwarden — Zen Browser",
           }
 
+  - commands: ["set-tiling"]
+    match:
+      - window_title: { equals: "Microsoft Visual Studio" }
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
