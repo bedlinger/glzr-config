@@ -10,7 +10,8 @@ userprofile := EnvGet("userprofile")
 
 browser := "zen.exe"
 music := userprofile "\AppData\Roaming\Spotify\Spotify.exe"
-editor := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+vsc := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+vs := "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe"
 terminal := "wt.exe"
 
 ; (Alt+B) Open Browser
@@ -20,7 +21,12 @@ terminal := "wt.exe"
 
 ; (Alt+C) Open Visual Studio Code
 !c:: {
-    Run editor
+    Run vsc
+}
+
+; (Alt+Shift+C) Open Visual Studio
+!+c:: {
+    Run vs
 }
 
 ; (Alt+Z) Open Music App
