@@ -9,6 +9,7 @@
 userprofile := EnvGet("userprofile")
 
 browser := "zen.exe"
+browser_private := "C:\Program Files\Zen Browser\private_browsing.exe"
 music := userprofile "\AppData\Roaming\Spotify\Spotify.exe"
 vsc := userprofile "\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 vs := "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe"
@@ -17,6 +18,11 @@ terminal := "wt.exe"
 ; (Alt+B) Open Browser
 !b:: {
     Run browser
+}
+
+; (Alt+Shift+B) Open Browser in Private Mode
+!+b:: {
+    Run browser_private
 }
 
 ; (Alt+C) Open Visual Studio Code
